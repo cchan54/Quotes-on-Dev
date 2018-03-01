@@ -229,8 +229,8 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: #ffffff;
+  font-family: "Exo", sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
 
@@ -292,7 +292,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #222222;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
@@ -544,6 +544,7 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/* Archives */
 /* Posts and pages */
 .sticky {
   display: block; }
@@ -587,5 +588,67 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+/* Front Page */
+.home {
+  width: 90%;
+  margin: 2rem 1rem 1rem 2rem;
+  font-family: "Exo", sans-serif;
+  font-size: 16px; }
+  .home .logo img {
+    width: 55%; }
+    @media (min-width: 1080px) {
+      .home .logo img {
+        width: 75%;
+        margin: 2rem 5rem 0rem 10rem; } }
+  .home .content-area {
+    width: 50%;
+    margin: 4rem 10rem 0rem 10rem; }
+  .home button {
+    width: 240px;
+    height: 50px;
+    font-size: 1.25rem;
+    color: #0c0;
+    text-shadow: none;
+    font-weight: 500;
+    border: 2px solid #0c0;
+    border-radius: 3px;
+    background-color: #222;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  .home .site-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .home .site-info .site-footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .home .site-info a {
+      color: #0c0;
+      text-decoration: none;
+      margin-right: 1rem; }
+    .home .site-info ul {
+      margin: 0px;
+      padding: 0px;
+      width: auto;
+      list-style: none; }
+    .home .site-info li {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+    .home .site-info .footer-navigation {
+      padding: 0px;
+      margin: 4.5rem 0 0 0; }
+      .home .site-info .footer-navigation p {
+        margin: 0px; }
+
 /* All Archives Page */
 /* Submit a Quote Page */

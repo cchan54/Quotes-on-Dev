@@ -22,21 +22,14 @@
 
 			<header id="masthead" class="site-header" role="banner">
 				<div class="site-branding">
-					<div class="logo">
-						<h1 class="site-title screen-reader-text">
-							<a href="<?php esc_url( home_url( '/' ) ); ?>">
-								<?php bloginfo( ); ?>
-							</a>
-						</h1>
-
-						<a href="<?php esc_url( home_url( '/' ) ); ?>">
-							<img src="<?php echo get_template_directory_uri() . '/images/qod-logo.svg'; ?>" class="logo" alt="Quotes on Dev Logo">
-						</a>
-
-					</div><!-- logo -->
-
-				</div><!-- .site-branding -->
-
+					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+							<div class="logo">
+								<a href="<?php echo home_url(); ?>">
+									<img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/qod-logo.svg" alt="Quotes on Dev logo" />
+								</a>
+							</div>
 			</header><!-- #masthead -->
-
+			</div><!-- .site-branding -->
 			<div id="content" class="site-content">
+		</div>
+

@@ -20,11 +20,12 @@
 							'menu_class' => 'footer-navigation'
 						)
 						);
+					
 						?>
+				</div><!-- .site-info -->
 
 					<p>Brought to you by © <a href="http://www.cliffchan.ca">Cliff Chan</a> <?php echo date( 'Y' ) ?></p>
 
-				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 
