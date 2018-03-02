@@ -18,7 +18,7 @@
 
 /* Page Template */
 
-.home, .page, .single, .archive {
+.home, .blog, .page, .single, .archive {
   width: 90%;
   height: 100vh;
   font-family: $font__main;
@@ -59,9 +59,17 @@
     }
   }
 
+  .entry-meta {
+    display: flex;
+
     h2.entry-title {
+      width: auto;
       font-size: 1.25rem;
+      text-align: top;
+      padding-right: 1px;
+      margin: 0px;
     }
+  }
 
   .logo img {
     display: block;

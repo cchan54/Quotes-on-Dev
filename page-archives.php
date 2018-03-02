@@ -19,7 +19,7 @@ get_header(); ?>
           <h2>Quote Authors</h2>
           <ul>
           <?php
-            $posts = get_posts('post_per_page=-1');
+            $posts = get_posts('posts_per_page=-1');
             foreach( $posts as $post ) : setup_postdata( $post );
           ?>
               <li>
