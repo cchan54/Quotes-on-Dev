@@ -896,7 +896,8 @@ object {
       .page #colophon .footer-navigation ul,
       .single #colophon .footer-navigation ul,
       .archive #colophon .footer-navigation ul {
-        padding: 0px; }
+        padding: 0px;
+        margin: 0; }
       .home #colophon .footer-navigation li,
       .blog #colophon .footer-navigation li,
       .page #colophon .footer-navigation li,
