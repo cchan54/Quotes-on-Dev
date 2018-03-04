@@ -42,7 +42,7 @@ get_header(); ?>
 
         </form>
             
-          <p class="submit-success-message" style="display:none;"></p>
+          <p class="submit-success-message"></p>
 
 
           <?php else: ?>

@@ -4,7 +4,9 @@
 
 /* All Pages */
 
-.archive .entry-content p, .blog .entry-content p, .single .entry-content p {
+.archive .entry-content p,
+.blog .entry-content p,
+.single .entry-content p {
   font-size: 1.25rem;
 
   @include tablet {
@@ -18,7 +20,11 @@
 
 /* Page Template */
 
-.home, .blog, .page, .single, .archive {
+.home,
+.blog,
+.page,
+.single,
+.archive {
   width: 90%;
   height: 100vh;
   font-family: $font__main;
@@ -30,17 +36,17 @@
     justify-content: center;
     margin: 2rem 1rem 1rem 2rem;
 
-  .content-area {
-    display: flex;
-    padding: 0 1rem 0 1rem;
-    margin: 2rem;
+    .content-area {
+      display: flex;
+      padding: 0 1rem 0 1rem;
+      margin: 2rem;
 
-    .site-main {
-      width: 75%;
-      margin: 2rem 0 0 2rem;
-    }
+      .site-main {
+        width: 75%;
+        margin: 2rem 0 0 2rem;
+      }
 
-    &:before,
+      &:before,
       &:after {
         font-family: FontAwesome;
         font-size: 125px;
@@ -75,111 +81,134 @@
     display: block;
     width: 300px;
     @media screen and (min-width: 620px) {
-        width: 500px;
+      width: 500px;
     }
     @media screen and (min-width: 1080px) {
-        width: 700px;
-        margin: 0 auto;
+      width: 700px;
+      margin: 0 auto;
     }
   }
 
-button {
-  width: 240px;
-  height: 50px;
-  font-size: 1.25rem; 
-  color: $font__color2;
-  text-shadow: none;
-  font-weight: 500;
-  border: 2px solid #0c0; 
-  border-radius: 3px;
-  background-color: #222;
-  box-shadow: none;
-}
+  button {
+    width: 240px;
+    height: 50px;
+    font-size: 1.25rem;
+    color: $font__color2;
+    text-shadow: none;
+    font-weight: 500;
+    border: 2px solid #0c0;
+    border-radius: 3px;
+    background-color: #222;
+    box-shadow: none;
 
-.container {
-  @include desktop {
-    font-size: 2.5rem;
-    width: 80%;
-    justify-content: center;
-    padding-left: 13rem;
+    @include desktop {
+      margin-left: 18rem;
+    }
   }
-}
 
-/* Footer */
+  .container {
+    @include desktop {
+      font-size: 2.5rem;
+      width: 80%;
+      justify-content: center;
+      padding-left: 13rem;
+    }
+  }
 
-#colophon {
-  justify-content: flex-end;
-  margin: 4.5rem 0 3rem;
-  width: 100%;
+  /* Footer */
 
-  .site-info {
+  #colophon {
+    justify-content: flex-end;
+    margin: 4.5rem 0 3rem;
+    width: 100%;
+
+    .site-info {
       display: inline-flex;
       flex-wrap: wrap;
 
       @media screen and (min-width: 620px) {
-          flex-wrap: nowrap;
+        flex-wrap: nowrap;
       }
 
       @media screen and (min-width: 1080px) {
-          justify-content: flex-end;
-          display: inline-flex;
+        justify-content: flex-end;
+        display: inline-flex;
       }
 
       p {
-          width: 100%;
-          flex: 0 1 100%;
-          line-height: 1;
-          @media screen and (min-width: 620px) {
-              flex: 0 1 auto;
-              padding-left: 1rem
-          }
+        width: 100%;
+        flex: 0 1 100%;
+        line-height: 1;
+        @media screen and (min-width: 620px) {
+          flex: 0 1 auto;
+          padding-left: 1rem;
         }
       }
+    }
 
-      .site-footer {
-        @include desktop {
-          display: inline-flex;
-        }
+    .site-footer {
+      @include desktop {
+        display: flex;
       }
+    }
 
-  .footer-navigation {
-    display: inline-flex;
-    // margin: 1rem 0 0 0;
-    justify-content: flex-start;
-    padding: 0;
-    text-decoration: none;
-    
-    a {
+    .footer-navigation {
+      display: inline-flex;
+      // margin: 1rem 0 0 0;
+      justify-content: flex-start;
+      padding: 0;
       text-decoration: none;
-    }
 
-    ul {
-      padding: 0px;
-    }
+      a {
+        text-decoration: none;
+      }
 
-    li {
+      ul {
+        padding: 0px;
+      }
+
+      li {
         color: $font__color2;
         display: inline-flex;
         list-style: none;
         padding: 0 1rem;
         border-right: 1px solid #fff;
         line-height: 1;
-    }
-    li:first-child {
+      }
+      li:first-child {
         padding-left: 0;
-    }
-    li:last-child {
+      }
+      li:last-child {
         border-right: 0;
         @media screen and (min-width: 620px) {
-        border-right: 1px solid #fff;
+          border-right: 1px solid #fff;
         }
+      }
     }
   }
 }
-}
-
 
 /* All Archives Page */
 
-
 /* Submit a Quote Page */
+
+button {
+  width: 240px;
+  height: 50px;
+  font-size: 1.25rem;
+  border: 2px solid #0c0;
+  border-radius: 3px;
+  background-color: #222;
+}
+
+#quote-author,
+#quote-content,
+#quote-source,
+#quote-source-url {
+  background-color: white;
+  color: black;
+  border-color: $font__color2;
+  display: block;
+  margin: 1rem;
+  padding: 0px;
+}
