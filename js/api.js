@@ -1,4 +1,5 @@
 (function($) {
+  var lastPage = '';
   $('#new-quote-button').on('click', function(event) {
     event.preventDefault();
 
@@ -36,38 +37,49 @@
       } else {
         $('.source').text('');
       }
+      var push_url = api_vars.home_url + "/" + post[0].slug; 
+      history.pushState(null, null, push_url);
+    });
+    $(window).on('popstate', function() {
+      console.log("popstate fired!");
+      if (window.location.hash.indexOf('qm-overview ') === 1) {
+        return false;
+      } else {
+        window.location.replace(lastPage);
+      }
     });
   });
 
   /* Ajax post method to post upon submission */
 
-$('.submit-quote').on('click', function(event){
-  event.preventDefault();
+ 
+  $('.submit-quote').on('click', function (event) {
+ 
+    event.preventDefault();
+    var title = $('#quote-author').val();
+    var quote = $('#quote-content').val();
+    var source = $('#quote-source').val();
+    var sourceUrl = $('#quote-source-url').val();
+ 
+    $.ajax({
+      method: 'post',
+      url: api_vars.root_url + 'wp/v2/posts/',
+      data: {
+        title: title,
+        content: quote,
+        _qod_quote_source: source,
+        _qod_quote_source_url: sourceUrl,
+        status: "publish"
+      },
+      beforeSend: function (xhr) {
+        xhr.setRequestHeader('X-WP-Nonce', api_vars.nonce);
+      }
+    }).done(function () {
+      alert(api_vars.success);
+      $("#quote-submission-form").trigger('reset');
+    }).fail(function() {
+      alert(api_vars.failure);
+    });
+  }); 
 
-  var quoteAuthor = $('#quote-author').val();
-  var quoteContent = $('#quote-content').val();
-  var quoteSource =$('#quote-source').val();
-  var quoteSourceUrl = $('#quote-source-url').val();
-
-  $.ajax({
-    method: 'POST',
-    url: api_vars.root_url + 'wp/v2/posts',
-    data: {
-     'title': quoteAuthor,
-     'content': quoteContent,
-     'status': 'publish',
-     '_qod_quote_source': quoteSource, 
-     '_qod_quote_source_url': quoteSourceUrl
-   },
-     
-   beforeSend: function(xhr) {
-     xhr.setRequestHeader( 'X-WP-Nonce', api_vars.nonce );
-   }
-
- }).done( function() {
-  console.log(api_vars.success);
-  $('#quote-submit-form').hide({duration:300});
-  $('.quote-submit-wrapper .entry-title').append('<p>' + api_vars.success + '</p>');
-});
-});
 })(jQuery);
