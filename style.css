@@ -643,17 +643,20 @@ object {
 /* All Pages */
 .archive .entry-content p,
 .blog .entry-content p,
-.single .entry-content p {
+.single .entry-content p,
+.error404 p {
   font-size: 1.25rem; }
   @media (min-width: 620px) {
     .archive .entry-content p,
     .blog .entry-content p,
-    .single .entry-content p {
+    .single .entry-content p,
+    .error404 p {
       font-size: 1.75rem; } }
   @media (min-width: 1080px) {
     .archive .entry-content p,
     .blog .entry-content p,
-    .single .entry-content p {
+    .single .entry-content p,
+    .error404 p {
       font-size: 2.5rem; } }
 
 /* Page Template */
@@ -661,7 +664,8 @@ object {
 .blog,
 .page,
 .single,
-.archive {
+.archive,
+.error404 {
   width: 90%;
   height: 100vh;
   font-family: "Exo", sans-serif;
@@ -672,7 +676,8 @@ object {
     .blog,
     .page,
     .single,
-    .archive {
+    .archive,
+    .error404 {
       display: block;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -686,7 +691,8 @@ object {
       .blog .content-area,
       .page .content-area,
       .single .content-area,
-      .archive .content-area {
+      .archive .content-area,
+      .error404 .content-area {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -696,7 +702,8 @@ object {
         .blog .content-area .site-main,
         .page .content-area .site-main,
         .single .content-area .site-main,
-        .archive .content-area .site-main {
+        .archive .content-area .site-main,
+        .error404 .content-area .site-main {
           width: 75%;
           margin: 2rem 0 0 2rem; }
         .home .content-area:before, .home .content-area:after,
@@ -707,14 +714,17 @@ object {
         .single .content-area:before,
         .single .content-area:after,
         .archive .content-area:before,
-        .archive .content-area:after {
+        .archive .content-area:after,
+        .error404 .content-area:before,
+        .error404 .content-area:after {
           font-family: FontAwesome;
           font-size: 125px; }
         .home .content-area:before,
         .blog .content-area:before,
         .page .content-area:before,
         .single .content-area:before,
-        .archive .content-area:before {
+        .archive .content-area:before,
+        .error404 .content-area:before {
           content: '\f10d';
           -ms-flex-item-align: start;
               align-self: flex-start;
@@ -723,7 +733,8 @@ object {
         .blog .content-area:after,
         .page .content-area:after,
         .single .content-area:after,
-        .archive .content-area:after {
+        .archive .content-area:after,
+        .error404 .content-area:after {
           content: '\f10e';
           -ms-flex-item-align: start;
               align-self: flex-start;
@@ -732,7 +743,8 @@ object {
   .blog .entry-meta,
   .page .entry-meta,
   .single .entry-meta,
-  .archive .entry-meta {
+  .archive .entry-meta,
+  .error404 .entry-meta {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
@@ -740,7 +752,8 @@ object {
     .blog .entry-meta h2.entry-title,
     .page .entry-meta h2.entry-title,
     .single .entry-meta h2.entry-title,
-    .archive .entry-meta h2.entry-title {
+    .archive .entry-meta h2.entry-title,
+    .error404 .entry-meta h2.entry-title {
       width: auto;
       font-size: 1.25rem;
       text-align: top;
@@ -750,7 +763,8 @@ object {
   .blog .logo img,
   .page .logo img,
   .single .logo img,
-  .archive .logo img {
+  .archive .logo img,
+  .error404 .logo img {
     display: block;
     width: 300px; }
     @media screen and (min-width: 620px) {
@@ -758,21 +772,24 @@ object {
       .blog .logo img,
       .page .logo img,
       .single .logo img,
-      .archive .logo img {
+      .archive .logo img,
+      .error404 .logo img {
         width: 500px; } }
     @media screen and (min-width: 1080px) {
       .home .logo img,
       .blog .logo img,
       .page .logo img,
       .single .logo img,
-      .archive .logo img {
+      .archive .logo img,
+      .error404 .logo img {
         width: 700px;
         margin: 0 auto; } }
   .home button,
   .blog button,
   .page button,
   .single button,
-  .archive button {
+  .archive button,
+  .error404 button {
     width: 240px;
     height: 50px;
     font-size: 1.25rem;
@@ -789,25 +806,35 @@ object {
       .blog button,
       .page button,
       .single button,
-      .archive button {
+      .archive button,
+      .error404 button {
         margin-left: 18rem; } }
   @media (min-width: 1080px) {
     .home .container,
     .blog .container,
     .page .container,
     .single .container,
-    .archive .container {
+    .archive .container,
+    .error404 .container {
       font-size: 2.5rem;
       width: 80%;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
       padding-left: 13rem; } }
+  .home .category-wrapper article,
+  .blog .category-wrapper article,
+  .page .category-wrapper article,
+  .single .category-wrapper article,
+  .archive .category-wrapper article,
+  .error404 .category-wrapper article {
+    border-bottom: dashed 1px dashed #ffffff; }
   .home #colophon,
   .blog #colophon,
   .page #colophon,
   .single #colophon,
-  .archive #colophon {
+  .archive #colophon,
+  .error404 #colophon {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -817,7 +844,8 @@ object {
     .blog #colophon .site-info,
     .page #colophon .site-info,
     .single #colophon .site-info,
-    .archive #colophon .site-info {
+    .archive #colophon .site-info,
+    .error404 #colophon .site-info {
       display: -webkit-inline-box;
       display: -ms-inline-flexbox;
       display: inline-flex;
@@ -828,7 +856,8 @@ object {
         .blog #colophon .site-info,
         .page #colophon .site-info,
         .single #colophon .site-info,
-        .archive #colophon .site-info {
+        .archive #colophon .site-info,
+        .error404 #colophon .site-info {
           -ms-flex-wrap: nowrap;
               flex-wrap: nowrap; } }
       @media screen and (min-width: 1080px) {
@@ -836,7 +865,8 @@ object {
         .blog #colophon .site-info,
         .page #colophon .site-info,
         .single #colophon .site-info,
-        .archive #colophon .site-info {
+        .archive #colophon .site-info,
+        .error404 #colophon .site-info {
           -webkit-box-pack: end;
               -ms-flex-pack: end;
                   justify-content: flex-end;
@@ -847,7 +877,8 @@ object {
       .blog #colophon .site-info p,
       .page #colophon .site-info p,
       .single #colophon .site-info p,
-      .archive #colophon .site-info p {
+      .archive #colophon .site-info p,
+      .error404 #colophon .site-info p {
         width: 100%;
         -webkit-box-flex: 0;
             -ms-flex: 0 1 100%;
@@ -858,7 +889,8 @@ object {
           .blog #colophon .site-info p,
           .page #colophon .site-info p,
           .single #colophon .site-info p,
-          .archive #colophon .site-info p {
+          .archive #colophon .site-info p,
+          .error404 #colophon .site-info p {
             -webkit-box-flex: 0;
                 -ms-flex: 0 1 auto;
                     flex: 0 1 auto;
@@ -868,7 +900,8 @@ object {
       .blog #colophon .site-footer,
       .page #colophon .site-footer,
       .single #colophon .site-footer,
-      .archive #colophon .site-footer {
+      .archive #colophon .site-footer,
+      .error404 #colophon .site-footer {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex; } }
@@ -876,7 +909,8 @@ object {
     .blog #colophon .footer-navigation,
     .page #colophon .footer-navigation,
     .single #colophon .footer-navigation,
-    .archive #colophon .footer-navigation {
+    .archive #colophon .footer-navigation,
+    .error404 #colophon .footer-navigation {
       display: -webkit-inline-box;
       display: -ms-inline-flexbox;
       display: inline-flex;
@@ -889,20 +923,23 @@ object {
       .blog #colophon .footer-navigation a,
       .page #colophon .footer-navigation a,
       .single #colophon .footer-navigation a,
-      .archive #colophon .footer-navigation a {
+      .archive #colophon .footer-navigation a,
+      .error404 #colophon .footer-navigation a {
         text-decoration: none; }
       .home #colophon .footer-navigation ul,
       .blog #colophon .footer-navigation ul,
       .page #colophon .footer-navigation ul,
       .single #colophon .footer-navigation ul,
-      .archive #colophon .footer-navigation ul {
+      .archive #colophon .footer-navigation ul,
+      .error404 #colophon .footer-navigation ul {
         padding: 0px;
         margin: 0; }
       .home #colophon .footer-navigation li,
       .blog #colophon .footer-navigation li,
       .page #colophon .footer-navigation li,
       .single #colophon .footer-navigation li,
-      .archive #colophon .footer-navigation li {
+      .archive #colophon .footer-navigation li,
+      .error404 #colophon .footer-navigation li {
         color: #0c0;
         display: -webkit-inline-box;
         display: -ms-inline-flexbox;
@@ -915,20 +952,23 @@ object {
       .blog #colophon .footer-navigation li:first-child,
       .page #colophon .footer-navigation li:first-child,
       .single #colophon .footer-navigation li:first-child,
-      .archive #colophon .footer-navigation li:first-child {
+      .archive #colophon .footer-navigation li:first-child,
+      .error404 #colophon .footer-navigation li:first-child {
         padding-left: 0; }
       .home #colophon .footer-navigation li:last-child,
       .blog #colophon .footer-navigation li:last-child,
       .page #colophon .footer-navigation li:last-child,
       .single #colophon .footer-navigation li:last-child,
-      .archive #colophon .footer-navigation li:last-child {
+      .archive #colophon .footer-navigation li:last-child,
+      .error404 #colophon .footer-navigation li:last-child {
         border-right: 0; }
         @media screen and (min-width: 620px) {
           .home #colophon .footer-navigation li:last-child,
           .blog #colophon .footer-navigation li:last-child,
           .page #colophon .footer-navigation li:last-child,
           .single #colophon .footer-navigation li:last-child,
-          .archive #colophon .footer-navigation li:last-child {
+          .archive #colophon .footer-navigation li:last-child,
+          .error404 #colophon .footer-navigation li:last-child {
             border-right: 1px solid #fff; } }
 
 /* All Archives Page */
@@ -941,13 +981,26 @@ button {
   border-radius: 3px;
   background-color: #222; }
 
-#quote-author,
-#quote-content,
-#quote-source,
-#quote-source-url {
-  background-color: white;
+#quote-submission-form #quote-author,
+#quote-submission-form #quote-content,
+#quote-submission-form #quote-source,
+#quote-submission-form #quote-source-url {
+  background-color: #fff7bf;
   color: black;
   border-color: #0c0;
   display: block;
   margin: 1rem;
   padding: 0px; }
+
+#quote-submission-form .submit-quote {
+  width: 240px;
+  height: 50px;
+  font-size: 1.25rem;
+  color: #0c0;
+  text-shadow: none;
+  font-weight: 500;
+  border: 2px solid #0c0;
+  border-radius: 3px;
+  background-color: #222;
+  -webkit-box-shadow: none;
+          box-shadow: none; }

@@ -6,7 +6,8 @@
 
 .archive .entry-content p,
 .blog .entry-content p,
-.single .entry-content p {
+.single .entry-content p,
+.error404 p, {
   font-size: 1.25rem;
 
   @include tablet {
@@ -24,7 +25,8 @@
 .blog,
 .page,
 .single,
-.archive {
+.archive,
+.error404 {
   width: 90%;
   height: 100vh;
   font-family: $font__main;
@@ -115,6 +117,12 @@
     }
   }
 
+.category-wrapper {
+  article {
+    border-bottom: dashed 1px dashed #ffffff;
+    }
+  }
+
   /* Footer */
 
   #colophon {
@@ -202,14 +210,28 @@ button {
   background-color: #222;
 }
 
+#quote-submission-form{
 #quote-author,
 #quote-content,
 #quote-source,
 #quote-source-url {
-  background-color: white;
+  background-color: #fff7bf;
   color: black;
   border-color: $font__color2;
   display: block;
   margin: 1rem;
   padding: 0px;
+  }
+  .submit-quote {
+    width: 240px;
+    height: 50px;
+    font-size: 1.25rem;
+    color: $font__color2;
+    text-shadow: none;
+    font-weight: 500;
+    border: 2px solid #0c0;
+    border-radius: 3px;
+    background-color: #222;
+    box-shadow: none;
+  }
 }

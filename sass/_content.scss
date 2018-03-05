@@ -2,40 +2,34 @@
 # Content
 --------------------------------------------------------------*/
 
-
 /* Archives */
 
-body.page-template-default{
+body.page-template-default {
 	width: 90%;
 	margin: .5rem;
-
 	a {
 		text-decoration: none;
 	}
-
 	ul {
 		padding: 0px;
 		margin: 0px;
 		text-decoration: none;
 	}
-
 	li {
 		list-style: none;
 		display: inline-flex;
 		padding: .25rem;
 	}
-
 	.post-archives {
 		justify-content: flex-start;
 	}
-
 	.site-footer {
 		margin-top: 4rem;
 		a {
 			border-right: 1px white;
 		}
 	}
-}	
+}
 
 /* Posts and pages */
 
@@ -47,7 +41,7 @@ body.page-template-default{
 	margin: 0 0 $base__space-unit;
 }
 
-.updated:not(.published){
+.updated:not(.published) {
 	display: none;
 }
 

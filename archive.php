@@ -19,6 +19,7 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
+			<div class="category-wrapper">
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
@@ -28,7 +29,7 @@ get_header(); ?>
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
-
+			</div>
 		<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
